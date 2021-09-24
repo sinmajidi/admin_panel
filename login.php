@@ -6,7 +6,7 @@
 </head>
 <body>
 
-<form action="/action_page.php">
+<form action="validate.php" method="post">
   <div class="container">
     <h1>ورود</h1>
   

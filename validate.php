@@ -4,8 +4,8 @@ include_once('connection.php');
 $admminname=$_POST["email"];
 $password=$_POST["psw"];
 $tbl_name = "login_information";
-echo $admminname." ".$password."<br>";
-$sql = "SELECT email, pass FROM $tbl_name";
+
+$sql = "SELECT adminname,email, pass FROM $tbl_name";
 $result = mysqli_query($conn, $sql);
 
 if (mysqli_num_rows($result) > 0) {
@@ -16,6 +16,9 @@ if (mysqli_num_rows($result) > 0) {
          
         if(" ".$admminname==$row["email"])
         {
+            $cookie_name = "user";
+            $cookie_value = $row["adminname"];
+            setcookie($cookie_name, $cookie_value, time() + (86400 * 30), "/"); 
             header("Location:adminpage.php");
         }
         else
@@ -29,4 +32,7 @@ if (mysqli_num_rows($result) > 0) {
 
 
 mysqli_close($conn);
+
+
+
 ?>

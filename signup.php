@@ -18,18 +18,28 @@ if ($_SERVER["REQUEST_METHOD"]== "POST") {
 	$password_repeat = test_input($_POST["psw-repeat"]);
 
 if($password!=$password_repeat)
-	echo "رمز و تکرار رمز یکسان نیست";
+	{
+	echo "<script language='javascript'>";
+	echo "alert('the password and repeat password doesn't match!!!')";
+	echo "</script>";
+		
+	}
+	else
+	{
 	
 $sql = "INSERT INTO  $tbl_name (adminname, email, pass)VALUES ('$adminname',' $email', '$password')";
 if (mysqli_query($conn, $sql)) {
 	echo "<script language='javascript'>";
-	echo "alert('it's ok')";
+	echo "alert('it's ok,sign in!!!')";
 	echo "</script>";
+	header("Location:login.php");
 } else {
 	echo "<script language='javascript'>";
 	echo "alert('some thing went wrong')";
 	echo "</script>";
 
+}
 }}	
+
 mysqli_close($conn);
 ?>

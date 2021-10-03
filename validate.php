@@ -14,7 +14,7 @@ if (mysqli_num_rows($result) > 0) {
         // you can see the rows by----> 
          echo "email: " . $row["email"]. "<br>"." pass " . $row["pass"]. "<br>";
          
-        if(" ".$admminname==$row["email"])
+        if(" ".$admminname==$row["email"] && $password==$row["pass"])
         {
             $cookie_name = "user";
             $cookie_value = $row["adminname"];

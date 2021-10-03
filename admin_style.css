@@ -1,0 +1,234 @@
+@font-face {
+  font-family: "Vazir";
+  src: url("font/Vazir.woff") format("woff");
+}
+@font-face {
+  font-family: "Vazir";
+  src: url("font/Vazir.woff2") format("woff2");
+}
+
+.fa-2x {
+  font-size: 2em;
+}
+.fa {
+  position: relative;
+  display: table-cell;
+  width: 60px;
+  height: 36px;
+  text-align: center;
+  vertical-align: middle;
+  font-size: 20px;
+  padding-top: 10px;
+}
+.main-menu:hover,
+nav.main-menu.expanded {
+  width: 250px;
+}
+.main-menu {
+  background-image: radial-gradient(
+    circle farthest-corner at 10% 20%,
+    rgba(14, 174, 87, 1) 0%,
+    rgba(12, 116, 117, 1) 90%
+  );
+  border-right: 1px solid #e5e5e5;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  height: 100%;
+  width: 60px;
+  right: 0;
+  overflow: hidden;
+  transition: width 0.05s linear;
+  z-index: 1000;
+}
+
+.main-menu > ul {
+  margin: 7px 0;
+}
+.main-menu li {
+  position: relative;
+  display: block;
+  width: 250px;
+}
+.main-menu span {
+  padding-left: 20px;
+}
+.main-menu li > a {
+  position: relative;
+  display: table;
+  border-collapse: collapse;
+  border-spacing: 0;
+  color: #eaeaea;
+  font-family: arial;
+  font-size: 14px;
+  text-decoration: none;
+  transition: all 0.1s linear;
+}
+.main-menu .nav-icon {
+  position: relative;
+  display: table-cell;
+  width: 60px;
+  height: 36px;
+  text-align: center;
+  vertical-align: middle;
+  font-size: 18px;
+}
+
+.main-menu .nav-text {
+  position: relative;
+  display: table-cell;
+  vertical-align: middle;
+  width: 190px;
+  font-family: Vazir;
+  text-align: right;
+  padding-right: 20px;
+}
+.main-menu > ul.logout {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+}
+.no-touch .scrollable.hover {
+  overflow-y: hidden;
+}
+.no-touch .scrollable.hover:hover {
+  overflow-y: auto;
+  overflow: visible;
+}
+a:hover,
+a:focus {
+  text-decoration: none;
+}
+nav {
+  user-select: none;
+}
+
+nav ul,
+nav li {
+  outline: 0;
+  margin: 0;
+  padding: 0;
+}
+.main-menu li:hover > a,
+nav.main-menu li.active > a,
+.dropdown-menu > li > a:hover,
+.dropdown-menu > li > a:focus,
+.dropdown-menu > .active > a,
+.dropdown-menu > .active > a:hover,
+.dropdown-menu > .active > a:focus,
+.no-touch .dashboard-page nav.dashboard-menu ul li:hover a,
+.dashboard-page nav.dashboard-menu ul li.active a {
+  color: #0c7475;
+  background-color: #eaeaea;
+}
+.area {
+  float: left;
+  background: #eaeaea;
+  width: 100%;
+  height: 100%;
+}
+
+div#preloader {
+  overflow: hidden;
+  background-color: #000;
+  height: 100%;
+  left: 0;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 999999;
+}
+
+.wrapper {
+  width: 200px;
+  height: 60px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+.circle {
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  border-radius: 50%;
+  background-color:rgba(12, 116, 117, 1);
+  left: 15%;
+  transform-origin: 50%;
+  animation: circle 0.5s alternate infinite ease;
+}
+
+@keyframes circle {
+  0% {
+    top: 60px;
+    height: 5px;
+    border-radius: 50px 50px 25px 25px;
+    transform: scaleX(1.7);
+  }
+  40% {
+    height: 20px;
+    border-radius: 50%;
+    transform: scaleX(1);
+  }
+  100% {
+    top: 0%;
+  }
+}
+.circle:nth-child(2) {
+  left: 45%;
+  animation-delay: 0.2s;
+}
+.circle:nth-child(3) {
+  left: auto;
+  right: 15%;
+  animation-delay: 0.3s;
+}
+
+.shadow {
+  width: 20px;
+  height: 4px;
+  border-radius: 50%;
+  background-color: rgba(183, 183, 183, 0.5);
+  position: absolute;
+  transform-origin: 50%;
+  z-index: -1;
+  left: 15%;
+  filter: blur(1px);
+  top: 62px;
+  animation: shadow 0.5s alternate infinite ease;
+}
+@keyframes shadow {
+  0% {
+    transform: scaleX(1.5);
+  }
+  40% {
+    transform: scaleX(1);
+    opacity: 0.7;
+  }
+  100% {
+    transform: scaleX(0.2);
+    opacity: 0.4;
+  }
+}
+
+.shadow:nth-child(4) {
+  left: 45%;
+  animation-delay: 0.2s;
+}
+.shadow:nth-child(5) {
+  left: auto;
+  right: 15%;
+  animation-delay: 0.3s;
+}
+.wrapper span {
+  position: absolute;
+  top: 75px;
+  font-family: Vazir;
+  direction: rtl;
+  font-size: 20px;
+  letter-spacing: 2px;
+  color:   rgba(12, 116, 117, 1);
+ 
+  left: 15%;
+}
+

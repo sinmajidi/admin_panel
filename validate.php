@@ -12,7 +12,7 @@ if (mysqli_num_rows($result) > 0) {
     // output data of each row
     while($row = mysqli_fetch_assoc($result)) {
         // you can see the rows by----> 
-         echo "email: " . $row["email"]. "<br>"." pass " . $row["pass"]. "<br>";
+         //echo "email: " . $row["email"]. "<br>"." pass " . $row["pass"]. "<br>";
          
         if(" ".$admminname==$row["email"] && $password==$row["pass"])
         {
@@ -23,7 +23,11 @@ if (mysqli_num_rows($result) > 0) {
         }
         else
         {
-            echo "it's not ok"."<br>";
+            //echo "it's not ok"."<br>";
+            echo '<script type="text/javascript">alert("Wrong Username or Password");window.location=\'login.php\';</script>';
+                
+            
+            
         }
     }
 } else {

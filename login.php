@@ -1,3 +1,7 @@
+<?php
+session_start();
+
+?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -20,6 +24,12 @@
 
     
     <hr>
+    <?php
+
+          echo "<h1>". $_SESSION["error"] ."</h1>";
+          $_SESSION["error"]=" ";
+        
+    ?>
     
 
     <button type="submit" class="registerbtn">ورود </button>
